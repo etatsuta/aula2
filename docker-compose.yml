@@ -1,0 +1,17 @@
+##version: '3.8' ## opcional 
+services:
+  app:
+    build: .  # Constroi a imagem a partir de Dockefile na raiz do projeto
+    container_name: escola_api
+    restart: always
+    ports:
+      - "8000:8000" # mapeia a porta 8000 do container para a porta 8000 do host
+    volumes:
+      - .:/app # monta o diretório atual do host dentro do container
+               # isto faz com que as alterações no código sejam refletidas no 
+               # container de forma automatizada devido ao --reload do uvicorn
+    
+    ## opcional:
+    # environment:
+    #   - PYTHONBUFFERED=1  # logs do python aparecem imediatamente
+      

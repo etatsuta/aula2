@@ -66,3 +66,20 @@ Este projeto é uma API desenvolvida com FastAPI para gerenciar alunos, cursos e
 - Para reiniciar o banco, basta apagar o arquivo `escola.db` (isso apagará todos os dados).
 
 ---
+
+
+---
+
+- para rodar o Docker, é preciso buildar o docker antes e depois rodar ele os comandos são:
+
+```sh
+docker build -t nomedeapi
+docker run -p 8000:8000 nomedeapi
+```
+-para verificar as apis rodando pode ser usar o comando 
+```sh
+docker images
+```
+Ou usar a aplicação do docker no desktop
+
+---
